@@ -1,0 +1,34 @@
+{
+    "name":"create zoom meeting",
+    "manifest_version":2,
+    "version":"0.0.0.2",
+    "description":"会議室のzoomスケジュールを作成",
+    "permissions":[
+        "declarativeContent",
+        "tabs",
+        "activeTab",
+        "*://script.google.com/*",
+        "*://script.googleusercontent.com/*"
+    ],
+    "background":{
+        "scripts":["background.js"],
+        "persistent":false
+    },
+    "page_action":{
+        "default_title":"Googleカレンダー作成画面でクリックすると指定された会議室のzoomを予約し説明欄に予約内容をセットします"
+    },
+    "content_scripts":[
+        {
+            "matches":[
+                "https://calendar.google.com/calendar/r"
+            ],
+            "js":[
+                "jquery-3.5.1.min.js",
+                "content.js"
+            ]
+        }
+    ],
+    "icons":{
+        "128":"z-128.png"
+    }
+}
