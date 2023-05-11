@@ -1,2 +1,7 @@
 # js-createMeeting
-chrome extension
+Zoom予約Chrome拡張機能
+
+googleカレンダー上で会議室予約時に利用
+新規カレンダー画面にて日時と会議室を選択。拡張機能をクリックすると、
+Zoom APIを通じてその会議室のZoom有料アカウントにてZoom予約をし、予約情報をカレンダー詳細欄にセット
+Zoom会議用のパスワードは本コード内で生成
