@@ -42,19 +42,7 @@ function createSchedule(){
             alert('タイトルを入力してください');
             return;
         }
-        // if(titleInputID){
-        //     titleInput = titleInputID;
-        //     title = titleInputID.dataset.initialValue;            
-        // }else{
-        //     titleInput = document.getElementsByClassName('whsOnd zHQkBf')[2]; //dialog box
-        //     title = titleInput.dataset.initialValue;
-        // }
-        // if(title){
-        //     console.log('title:',title);
-        // }else{
-        //     console.log('title is null');
-        //     return;
-        // }
+        
 
         if(isDate(startDateCheck)){
             startDateFormat = (startDate.substr(0, 4) + '-' + startDate.substr(4, 2) + '-' + startDate.substr(6, 2));
@@ -96,13 +84,7 @@ function createSchedule(){
             alert('開始終了を正しく入力してください');
             return;
         }
-        // let descClassLength = document.getElementsByClassName('editable').length;
-        // console.log('descClassLength:',descClassLength);
-        // let pSp5KLength = document.getElementsByClassName('pSp5K').length;
-        // console.log('pSp5KLength:',pSp5KLength);
-
-        // let iSSRObLength = document.getElementsByClassName('iSSROb snByac').length;
-        // console.log('iSSROb snByacLength:',iSSRObLength);
+        
         
         let roomList = $('#xRmLst > div > div');
         if(roomList.length == 0){
@@ -178,14 +160,7 @@ function post2GAS(sdate,stime,duration,title,calendarID,zoomRoom){
         zoomRoom: zoomRoom
     }
     let jsondata = JSON.stringify(data);
-    // console.log('jsondata:',jsondata);
-
-    // $.post(gasurl, jsondata, function(data,status, xhr){
-    //     console.log('data:',data);
-    //     console.log('status:',status);
-    //     console.log('xhr:',xhr);
-    // });
-
+    
 
 
     $.ajax({
