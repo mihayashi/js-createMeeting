@@ -1,15 +1,6 @@
 function doPost(e) {
   Logger.log(e);
   let postdata = JSON.parse(e.postData.getDataAsString());
-//  console.log('postdata:',postdata);
-//  console.log('postdata type:',typeof postdata);
-//  console.log('postdata.sdate type:',typeof postdata.sdate);
-//  console.log('postdata.sdate:',postdata.sdate);
-//  console.log('postdata.stime type:',typeof postdata.stime);
-//  console.log('postdata stime',postdata.stime);
-//  console.log('postdata.duration type:',typeof postdata.duration);
-//  console.log('postdata duration',postdata.duration);
-//  console.log('postdata.stime type:',typeof postdata.stime);
 //  console.log('postdata title',postdata.title);
 
   let sdate = postdata.sdate;
@@ -132,18 +123,7 @@ function generatePass() {
   }
 
   return result;
-  /*
-  let text = "";
-  let possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-
-  text = ""; //Reset text to empty string
-
-  for(let i=0;i<10;i++){
-    text += possible.charAt(Math.floor(Math.random() * possible.length));
-  }
   
-  return text;
-  */
 }
 
 function base64Encode(str){
@@ -159,7 +139,7 @@ function encodeJWT(secret) {
     });
     let encodedHeader = base64Encode(header);
     let payload = JSON.stringify({
-        iss: 'oYhAwYvDRQC1I6_N4F2Ayw',
+        iss: 'xxxx',
         exp: Math.floor((new Date().getTime()+10000) / 1000)
     });
     
