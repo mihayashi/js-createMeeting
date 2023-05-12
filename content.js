@@ -6,7 +6,6 @@ chrome.runtime.onMessage.addListener(function(request,sender,sendResponse){
 function createSchedule(){
 
     try {
-        console.log('action');
         let startDateInput = document.getElementById('xStDaIn');
         if (!startDateInput){
             throw new Error('スケジュール作成画面にて「タイトル」「開始・終了日時」「会議室」を入力の上押してください');
